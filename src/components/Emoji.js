@@ -2,10 +2,10 @@ import React from 'react';
 import { Button, Popup} from 'semantic-ui-react'
 
 
-export function Emoji({ country }) {
+export function Emoji(country) {
     const PopupExample = () => (
     <Popup
-        trigger={<Button content={country.flag.emoji} />}
+        trigger={<Button className="countryFlag" content={country.flag.emoji} />}
     >
         <Popup.Header>Country: {country.name}</Popup.Header>
         <Popup.Content>

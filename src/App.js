@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import {Header, TableHeader} from './components/layout/Header';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from "@apollo/react-hooks";
-import { CountriesContainer } from './containers/CountriesContainer';
-import { EmojisContainer } from './containers/EmojisContainer';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import {Header} from './components/layout/Header'
+import ApolloClient from 'apollo-boost'
+import { ApolloProvider } from "@apollo/react-hooks"
+import { EmojisContainer } from './containers/EmojisContainer'
+import { AntTable } from './containers/AntTable'
+import './App.css'
 
 
 function App() {
@@ -19,13 +19,10 @@ function App() {
         <Header />
         <div className="App">
           <div className="container">
-            <Route exact path="/" render={props => (
-              <React.Fragment>
-                <TableHeader/>
-                <CountriesContainer />
-              </React.Fragment>
+            <Route exact path="/" render={() => (
+                <AntTable/>
             )} />
-            <Route exact path="/emojis" render={props => (
+            <Route exact path="/emojis" render={() => (
               <EmojisContainer />
             )} />
           </div>
