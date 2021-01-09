@@ -1,13 +1,13 @@
-import React from 'react'; 
-import { GET_COUNTRIES } from '../graphql/get-countries';
-import { useQuery } from '@apollo/react-hooks';
-import { Table} from 'antd';
-import 'antd/dist/antd.css';
+import React from 'react'
+import { GET_COUNTRIES } from '../graphql/get-countries'
+import { useQuery } from '@apollo/react-hooks'
+import { Table} from 'antd'
+import 'antd/dist/antd.css'
 
 export function AntTable() {
-    const { loading, error, data } = useQuery(GET_COUNTRIES);
-    if (loading) return 'Loading...';
-    if (error) return `Error! ${error.message}`;
+    const { loading, error, data } = useQuery(GET_COUNTRIES)
+    if (loading) return 'Loading...'
+    if (error) return `Error! ${error.message}`
     const columns = [
         {
             title: 'Flags',
@@ -58,12 +58,12 @@ export function AntTable() {
             filterMultiple: true,
             onFilter: (value, record) => { 
                 if (record.subregion.name){
-                    return  record.subregion.name === value;
+                    return  record.subregion.name === value
                 }
             },
         },
         
-    ];
+    ]
 
 
     return (

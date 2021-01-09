@@ -11,7 +11,7 @@ import './App.css'
 function App() {
   const client = new ApolloClient({
     uri: 'https://countries-274616.ew.r.appspot.com'
-  });
+  })
 
   return (
       <ApolloProvider client={client}>
@@ -29,7 +29,7 @@ function App() {
         </div>
       </Router>
       </ApolloProvider>
-  );
+  )
 }
 
-export default App;
+export default App

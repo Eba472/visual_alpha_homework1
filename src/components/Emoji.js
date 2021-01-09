@@ -1,12 +1,12 @@
-import React from 'react';
-import { Popover, Button } from 'antd';
-import 'antd/dist/antd.css';
+import React from 'react'
+import { Popover, Button } from 'antd'
+import 'antd/dist/antd.css'
 import {
     InfoCircleOutlined
-} from '@ant-design/icons';
+} from '@ant-design/icons'
 
 
-export function Emoji({ country }) {
+export function Emoji(country) {
     const link = "https://en.wikipedia.org/wiki/"+ country.name
     const content = (
         <div>
@@ -15,7 +15,7 @@ export function Emoji({ country }) {
             <h2 className="bigFlag">{country.flag.emoji}</h2>
             <a color="white" href={link}><InfoCircleOutlined/>  More info</a>
         </div>
-    );
+    )
     
     return (
         <Popover content={content} title={country.name}>

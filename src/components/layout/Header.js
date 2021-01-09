@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 
@@ -23,5 +23,5 @@ const linkStyle = {
     color: '#000',
     textDecoration: 'none',
     marginLeft: "auto",
-    marginRight: "auto",
+    marginRight: "auto"
 }
