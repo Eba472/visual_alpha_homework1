@@ -13,19 +13,6 @@ export function Header() {
         </header>
     )
 }
-export function TableHeader() {
-    return (
-        <table style={{paddingBottom: "20px", fontSize: "20px" }}>
-            <tr>
-                <th>Flag</th>
-                <th>Name</th>
-                <th>Capital city</th>
-                <th>Area</th>
-                <th>Population</th>
-            </tr>
-        </table>
-    )
-}
 const headerStyle = {
     background: "#333",
     color: '#fff',
