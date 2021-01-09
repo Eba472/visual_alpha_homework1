@@ -7,19 +7,19 @@ import {
 
 
 export function Emoji(country) {
-    const link = "https://en.wikipedia.org/wiki/"+ country.name
+    const link = "https://en.wikipedia.org/wiki/" + country.country.name
     const content = (
         <div>
-            <p>The population is {country.population}.</p>
-            <p>The land area is {country.area}.</p>
-            <h2 className="bigFlag">{country.flag.emoji}</h2>
+            <p>The population is {country.country.population}.</p>
+            <p>The land area is {country.country.area}.</p>
+            <h2 className="bigFlag">{country.country.flag.emoji}</h2>
             <a color="white" href={link}><InfoCircleOutlined/>  More info</a>
         </div>
     )
     
     return (
-        <Popover content={content} title={country.name}>
-            <Button className="flagButton" type="primary" onClick={() => window.location = link}>{country.flag.emoji} </Button>
+        <Popover content={content} title={country.country.name}>
+            <Button className="flagButton" type="primary" onClick={() => window.location = link}>{country.country.flag.emoji} </Button>
         </Popover>
     )
 }

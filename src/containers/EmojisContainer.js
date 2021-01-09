@@ -7,6 +7,7 @@ export function EmojisContainer() {
     const { loading, error, data } = useQuery(GET_COUNTRIES)
     if (loading) return 'Loading...'
     if (error) return `Error! ${error.message}`
+    console.log(data.Country[0])
 
     return (
         <div className="emoji_div">
