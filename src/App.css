@@ -16,13 +16,15 @@ a {
     margin-left: auto;
 }
 
-.countryFlag {
+.flagButton 
   width: 80px;
   padding-bottom: 4%;
   height: 50px;
   border-radius: 8px;
   background-color: whitesmoke;
   font-size: 40px;
+  background-color: white;
+  color: white;
 }
 .button:hover {
   background-color: #4CAF50; /* Green */
@@ -32,4 +34,9 @@ a {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.bigFlag {
+  font-size: 100px;
+  text-align: center;
 }
